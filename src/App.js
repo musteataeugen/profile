@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Person from "./Person";
 
-function App() {
+import List from "./List";
+
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Node", "MongoDB"];
+
+// Module
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <header>Header</header>
+      <section>
+        <Person
+          name="John Doe"
+          job="Developer"
+          avatar="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Prescription02&hairColor=Auburn&facialHairType=BeardMedium&facialHairColor=Black&clotheType=ShirtVNeck&clotheColor=Gray02&eyeType=Wink&eyebrowType=SadConcernedNatural&mouthType=Serious&skinColor=Yellow"
+        />
+
+        {/* HW1:
+        display the person skils 
+        List -> as ul+li
+        skills -> [...]
+        */}
+        <List data={skills} />
+       
+      </section>
+      <footer>Footer</footer>
+    </>
   );
 }
 
